@@ -8,4 +8,12 @@ describe Catalog do
       expect(Catalog.instance_method(:initialize).arity).to eq(1) # .arity returns an indication od arguments accepted by a method. In this case its only 1 - the (file path)
     end
   end
+
+  describe "#parse" do
+    it "should consist of two arrays" do
+      expect(Catalog.new(file_path).parse.first).to be_a Array
+      expect(Catalog.new(file_path).parse.last).to be_a Array
+    end
+  end
+
 end

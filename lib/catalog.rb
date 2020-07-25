@@ -4,4 +4,6 @@ class Catalog
     @file_path = file_path #instance variable
   end
 
+  
+
 end
