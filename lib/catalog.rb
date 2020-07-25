@@ -22,4 +22,10 @@ class Catalog
     end
   end
 
+  def hash
+    hash_data = Hash.new(){|hs, key| hs[key] = []}
+    parse.each{|key, value| hash[key] << value}
+    return hash
+  end
+
 end

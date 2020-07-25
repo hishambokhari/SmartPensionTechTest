@@ -22,4 +22,10 @@ describe Catalog do
     end
   end
 
+  describe "#fill_hash" do
+    it "should fill the hash with pages as the key and the coordinates as an array of values" do
+      expect(Catalog.new(file_path).fill_hash).to be_a Hash
+    end
+  end
+
 end
