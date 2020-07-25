@@ -16,6 +16,7 @@
 
 ### Execution/How to run this program!
 
+- To run this program and view the final results please clone this respository and run ruby main.rb file in the console under the lib folder.
 
 
 
