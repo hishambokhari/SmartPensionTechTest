@@ -45,4 +45,12 @@ class Catalog
     return hash_data.sort_by{|key, value| -value}.to_h
   end
 
+  def visits_on_average
+    hash_data = Hash.new()
+    hash.each do |key, value|
+      hash_data[key] = (value.count + value.uniq.count)/2
+    end
+    return hash_data.sort_by{|key, value| -value}.to_h
+  end
+
 end

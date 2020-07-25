@@ -32,6 +32,8 @@ describe Catalog do
     it "should return a hash" do
       expect(Catalog.new(file_path).page_visits).to be_a Hash
     end
+    it "returns the correct set of keys" do
+      expect(Catalog.new(file_path).page_visits.keys).to be_eql ["/contact/", "/products/3", "/home", "products/1", "/index", "/about", "/products/2"]
+    end                                                   
   end
-
 end
