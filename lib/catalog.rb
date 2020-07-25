@@ -11,4 +11,15 @@ class Catalog
     return pages_with_coordinates
   end
 
+  def fill_pages
+    pages = []
+    parse.each {|page| pages << page[0]}
+    pages.sort!
+    if pages.empty?
+      raise("Error: Log file is empty")
+    else
+      return pages
+    end
+  end
+
 end

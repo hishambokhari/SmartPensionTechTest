@@ -18,7 +18,7 @@ describe Catalog do
 
   describe "#fill_pages" do
     it "returns an array" do
-      expect(Catalog.new(file_path).file_pages).to be_a Array
+      expect(Catalog.new(file_path).fill_pages).to be_a Array
     end
   end
 
