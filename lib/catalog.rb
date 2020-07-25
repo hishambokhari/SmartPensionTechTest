@@ -37,4 +37,12 @@ class Catalog
     return hash_data.sort_by{|key, value| -value}.to_h
   end
 
+  def page_visits
+    hash_data = Hash.new(0)
+    hash.each do |key, value|
+      hash_data[key] = value.count
+    end
+    return hash_data.sort_by{|key, value| -value}.to_h
+  end
+
 end
