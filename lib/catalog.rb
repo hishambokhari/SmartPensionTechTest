@@ -24,8 +24,16 @@ class Catalog
 
   def hash
     hash_data = Hash.new(){|hs, key| hs[key] = []}
-    parse.each{|key, value| hash[key] << value}
-    return hash
+    parse.each{|key, value| hash_data[key] << value}
+    return hash_data
   end
 
+  def fill_hash
+    hash_data = Hash.new()
+    hash.each do |key, value| #hash is the hash method defined above
+      value.uniq!
+      hash_data[key] = value.count
+    end
+    return hash_data.sort_by{|key, value| -value}.to_h
+  end
 end
