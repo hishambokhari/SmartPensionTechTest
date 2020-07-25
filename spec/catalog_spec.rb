@@ -28,4 +28,10 @@ describe Catalog do
     end
   end
 
+  describe "#page_visits" do
+    it "should return a hash" do
+      expect(Catalog.new(file_path).page_visits).to be_a Hash
+    end
+  end
+
 end

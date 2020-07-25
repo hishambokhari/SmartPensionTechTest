@@ -36,4 +36,5 @@ class Catalog
     end
     return hash_data.sort_by{|key, value| -value}.to_h
   end
+
 end
